@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>
+CULTURE VOICE
+</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="template1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#808080">
+<br>
+<div class="header">
+  <a href="about.html" class="logo">CULTURE VOICE</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="about.html">About</a>
+    <a href="unwto.html">UNWTO</a>
+  </div>
+</div>
+<br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 8</div>
+  <img src="flag.jpeg" style="width:100%">
+  <div class="text">Flag of the United Nations</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 8</div>
+  <img src="headquarters.jpeg" style="width:100%">
+  <div class="text">Headquarters of United Nations in New York, USA</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <img src="sec.jpeg" style="width:100%">
+  <div class="text">António Guterres (SECRETARY GENERAL OF UN)</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 8</div>
+  <img src="organs.jpeg" style="width:100%">
+  <div class="text">The General Assembly of the United Nations</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 8</div>
+  <img src="ecosoc.jpeg" style="width:100%">
+  <div class="text">Economic and Social Council of the United Nations</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 8</div>
+  <img src="security.jpeg" style="width:100%">
+  <div class="text">Security Council of the United Nations</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">7 / 8</div>
+  <img src="icj.jpeg" style="width:100%">
+  <div class="text">International Court of Justice in Hague, Netherlands</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 8</div>
+  <img src="secr.jpeg" style="width:100%">
+  <div class="text">Secretariat of the United Nations</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>
+CULTURE VOICE
+</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="template2.css">
+</head>
+<body bgcolor="#808080">
+<br>
+<div class="header">
+  <a href="about.html" class="logo">CULTURE VOICE</a>
+  <div class="header-right">
+    <a href="homepage.html">Home</a>
+    <a href="about.html">About</a>
+    <a  class="active" href="unwto.html">UNWTO</a>
+  </div>
+</div>
+<br>
+<img id="myImg" src="hq.jpeg" alt="Headquarters of UNWTO in Madrid, Spain" style="width:100%;max-width:500px">
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<br>
+<button class="accordion">What is UNWTO?</button>
+<div class="panel">
+  <p>The World Tourism Organization (UNWTO) is the United Nations specialized agency entrusted with the promotion of responsible, sustainable and universally accessible tourism. It is the leading international organization in the field of tourism, which promotes tourism as a driver of economic growth, inclusive development and environmental sustainability and offers the sector leadership and support in advancing knowledge and tourism policies worldwide. It serves as a global forum for tourism policy issues and a practical source of tourism research and knowledge. It encourages the implementation of the Global Code of Ethics for Tourism to maximize the contribution of tourism to socio-economic development, while minimizing its possible negative impacts, and is committed to promoting tourism as an instrument in achieving the United Nations Sustainable Development Goals (SDGs), geared towards eliminating poverty and fostering sustainable development and peace worldwide.</p>
+</div>
+<br>
+<button class="accordion">What does UNWTO do?</button>
+<div class="panel">
+  <p>UNWTO generates market knowledge, promotes competitive and sustainable tourism policies and instruments, fosters tourism education and training, and works to make tourism an effective tool for development through technical assistance projects in over 100 countries around the world.</p>
+</div>
+<br>
+<button class="accordion">History of UNWTO</button>
+<div class="panel">
+  <p>The origin of UNWTO stems back to 1925 when the first international congress of official tourist organisations was held at The Hague. The congress continued to meet annually and in 1930, it decided to form a formal union, which in 1934 became the International Union of Official Tourist Publicity Organizations (IUOTPO).</p>
+<p>Following the end of the Second World War and with international travel numbers increasing, the IUOTPO restructured itself into the International Union of Official Travel Organizations (IUOTO). A technical, non-governmental organization, the IUOTO was made up of a combination of national tourist organizations, industry and consumer groups. The goals and objectives of the IUOTO were to not only promote tourism in general but also to extract the best out of tourism as an international trade component and as an economic development strategy for developing nations.</p>
+</div>
+<br><br>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+var modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+</body>
+</html>
